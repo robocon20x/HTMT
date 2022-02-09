@@ -1,0 +1,28 @@
+﻿  baitapvenha1.cpp
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(14,13): warning C4018: '>=': signed/unsigned mismatch
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(38,14): warning C4018: '>=': signed/unsigned mismatch
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(55,20): warning C4018: '<': signed/unsigned mismatch
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(96,20): warning C4018: '<': signed/unsigned mismatch
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(105,11): warning C4018: '<': signed/unsigned mismatch
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(106,53): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(115,20): warning C4018: '<': signed/unsigned mismatch
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(117,21): warning C4018: '<': signed/unsigned mismatch
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(138,15): warning C4018: '<': signed/unsigned mismatch
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(141,15): warning C4018: '>': signed/unsigned mismatch
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(161,27): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(171,20): warning C4018: '<': signed/unsigned mismatch
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(173,21): warning C4018: '<': signed/unsigned mismatch
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(192,13): warning C4018: '>=': signed/unsigned mismatch
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(213,20): warning C4018: '<': signed/unsigned mismatch
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(236,21): warning C4018: '<': signed/unsigned mismatch
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(248,20): warning C4018: '<': signed/unsigned mismatch
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(275,20): warning C4018: '<': signed/unsigned mismatch
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(293,10): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(294,20): warning C4018: '<': signed/unsigned mismatch
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(295,45): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(318,20): warning C4018: '<': signed/unsigned mismatch
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(332,20): warning C4018: '<': signed/unsigned mismatch
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(335,20): warning C4018: '<': signed/unsigned mismatch
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(364,20): warning C4018: '<': signed/unsigned mismatch
+D:\hoc\He Thong May Tinh\baitap\Project1\Project1\baitapvenha1.cpp(379,20): warning C4018: '<': signed/unsigned mismatch
+  Project1.vcxproj -> D:\hoc\He Thong May Tinh\baitap\Project1\Debug\Project1.exe

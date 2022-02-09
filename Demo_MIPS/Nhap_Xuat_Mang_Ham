@@ -1,0 +1,148 @@
+#Yeu cau: Su dung ky thuat ham. Viet chuong trinh nhap xuat mang 1 chieu so nguyen
+
+.data
+	tb1: .asciiz "Nhap n: "
+	tb2: .asciiz "a["
+	tb3: .asciiz "]: "
+	tb4: .asciiz "Mang vua nhap la: "
+	n: .word 0
+	arr: .space 100 # 25 phan tu
+	
+.text
+	#truyen tham so
+	la $a0,n
+	la $a1,arr
+	# Goi ham nhapmang
+	jal _NhapMang
+
+	#xuat tb4
+	li $v0,4
+	la $a0,tb4
+	syscall
+	
+	#truyen tham so
+	lw $a0,n
+	la $a1,arr
+	# Goi ham xuatmang
+	jal _XuatMang
+
+	#ket thuc
+	li $v0,10
+	syscall
+	
+
+	
+#========== Ham Nhap Mang =============
+#dau thu tuc
+_NhapMang:
+	addi $sp,$sp,-32
+	sw $ra,($sp)
+	sw $s0,4($sp)
+	sw $s1,8($sp)
+	sw $t0,12($sp)
+	sw $t1,16($sp)
+	
+
+	#Lay tham so luu vao thanh ghi
+	move $s0,$a0
+	move $s1,$a1
+
+#than thu tuc
+	#xuat tb1
+	li $v0,4
+	la $a0,tb1
+	syscall
+
+	#nhap so nguyen
+	li $v0,5
+	syscall
+
+	#Luu vao n tai $s0
+	sw $v0,($s0)
+	
+	#load gia tri n
+	lw $s0,($s0)
+
+	#Khoi tao vong lap
+	li $t0,0 # i = 0
+_NhapMang.Lap:
+	#xuat tb2
+	li $v0,4
+	la $a0,tb2
+	syscall
+
+	#xuat i
+	li $v0,1
+	move $a0,$t0
+	syscall
+
+	#xuat tb3
+	li $v0,4
+	la $a0,tb3
+	syscall
+
+	#nhap so nguyen
+	li $v0,5
+	syscall
+
+	#Luu vao a[i]  tai $s1
+	sw $v0,($s1)
+	
+	#Tang dia chi 
+	addi $s1,$s1,4
+	
+	#tang chi so i
+	addi $t0,$t0,1
+	
+	#Kiem tra i < n thi Lap
+	blt $t0,$s0,_NhapMang.Lap
+
+#Cuoi thu tuc
+	#resotore
+	lw $ra,($sp)
+	lw $s0,4($sp)
+	lw $s1,8($sp)
+	lw $t0,12($sp)
+	lw $t1,16($sp)
+	
+	#xoa stack
+	addi $sp,$sp,32
+	# tra ve
+	jr $ra
+
+
+
+# ========== Xuat Mang ===========
+_XuatMang:
+	addi $sp,$sp,-32
+	sw $ra,($sp)
+	sw $s0,4($sp)
+	sw $s1,8($sp)
+	sw $t0,12($sp)
+	sw $t1,16($sp)
+	
+	#Lay tham so luu vao thanh ghi
+	move $s0,$a0 #n
+	move $s1,$a1 #arr
+
+#Than thu tuc
+	#khoi tao vong lap
+	li $t0,0 # i = 0
+_XuatMang.Lap:
+	#xuat a[i]
+	li $v0,1
+	lw $a0,($s1)
+	syscall
+
+	#xuat khoang trang
+	li $v0,11
+	li $a0,' '
+	syscall
+
+	#Tang dia chi mang
+	addi $s1,$s1,4
+	#Tang i
+	addi $t0,$t0,1
+	
+	#Kiem tra i < n thi Lap
+	blt $t0,$s0,_XuatMang.Lap

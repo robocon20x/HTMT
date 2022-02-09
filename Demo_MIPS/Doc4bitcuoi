@@ -1,0 +1,64 @@
+#Doc day bit
+
+.data
+	tb1: .asciiz "Nhap 1 so nguyen: "
+	tb2: .asciiz "Day bit la: "
+	a: .word 0
+.text
+	#xuat tb1
+	li $v0,4
+	la $a0,tb1
+	syscall
+
+	#nhap so nguyen
+	li $v0,5
+	syscall
+
+	#luu gia tri vao a
+	sw $v0,a
+
+	#Load gia tri a vao s0
+	lw $s0,a
+	
+	#xuat tb2
+	li $v0,4
+	la $a0,tb2
+	syscall
+
+	
+	#Doc bit 28
+	srl $s1,$s0,3
+	andi $t0,$s1,1
+	
+	#xuat bit 
+	li $v0,1
+	move $a0,$t0
+	syscall
+
+	#Doc bit 29
+	srl $s1,$s0,2
+	andi $t0,$s1,1
+	
+	#xuat bit 
+	li $v0,1
+	move $a0,$t0
+	syscall
+	
+
+	#Doc bit 30
+	srl $s1,$s0,1
+	andi $t0,$s1,1
+	
+	#xuat bit 
+	li $v0,1
+	move $a0,$t0
+	syscall
+
+	#Doc bit 31
+	andi $t0,$s0,1
+	
+	#xuat bit 
+	li $v0,1
+	move $a0,$t0
+	syscall
+	
